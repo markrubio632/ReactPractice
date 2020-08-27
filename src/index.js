@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Greeter from "./frontend";
 
 //WHEN A <DIV> TAG FROM INDEX.HTML IS CALLED, ONLY ONE ELEMENT CAN EXIST
 
@@ -13,21 +14,21 @@ const myHead = (
 );
 
 const logger = (
-	<button name="logger" href="/login">Login</button>
+	<button name="logger" href="/login" >Login</button>
 );
 const reggie = (
 	<button name="reggie" href="/register">Register</button>
 );
-
+/* 
 class Greeter extends React.Component() {
 	render() {
 		return <h1>please help</h1>;
 	}
 }
-
+ */
 ReactDOM.render(myHead, document.getElementById('root'));
-//ReactDOM.render(logger, document.getElementById("buttons"));
-ReactDOM.render(<Greeter />, document.getElementById("header"));
+ReactDOM.render(logger, document.getElementById("buttons"));
+ReactDOM.render(<Greeter/>, document.getElementById("hello"));
 
 	//trying to call a class from index.html but i get a --
 	//'HelloThere' is not defined  react/jsx-no-undef -- error
